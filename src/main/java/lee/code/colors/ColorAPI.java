@@ -18,8 +18,9 @@ public class ColorAPI {
         updatePlayerColorData(player);
     }
 
-    public static char getColorChar(UUID uuid) {
-        return Colors.getInstance().getCacheManager().getCachePlayers().getColor(uuid).getChar();
+    public static String getColorChar(UUID uuid) {
+        if (!Colors.getInstance().getCacheManager().getCachePlayers().hasPlayerData(uuid)) return "&f";
+        return "&" + Colors.getInstance().getCacheManager().getCachePlayers().getColor(uuid).getChar();
     }
 
     public static void updatePlayerColorData(OfflinePlayer player) {
