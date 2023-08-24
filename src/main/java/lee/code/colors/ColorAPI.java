@@ -13,21 +13,6 @@ public class ColorAPI {
         updatePlayerColorData(player);
     }
 
-    public static void setPrefix(OfflinePlayer player, String prefix) {
-        Colors.getInstance().getCacheManager().getCachePlayers().setPrefix(player.getUniqueId(), prefix);
-        updatePlayerColorData(player);
-    }
-
-    public static void setSuffix(OfflinePlayer player, String suffix) {
-        Colors.getInstance().getCacheManager().getCachePlayers().setSuffix(player.getUniqueId(), suffix);
-        updatePlayerColorData(player);
-    }
-
-    public static void setPriority(OfflinePlayer player, String priority) {
-        Colors.getInstance().getCacheManager().getCachePlayers().setPriority(player.getUniqueId(), priority);
-        updatePlayerColorData(player);
-    }
-
     public static void setColor(OfflinePlayer player, ChatColor color) {
         Colors.getInstance().getCacheManager().getCachePlayers().setColor(player.getUniqueId(), color);
         updatePlayerColorData(player);

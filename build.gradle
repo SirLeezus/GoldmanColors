@@ -67,7 +67,7 @@ shadowJar {
         include(dependency('com.j256.ormlite:ormlite-jdbc:6.1'))
     }
 
-    relocate 'com.j256.ormlite', 'lee.code.towns.ormlite'
+    relocate 'com.j256.ormlite', 'lee.code.colors.ormlite'
 }
 
 

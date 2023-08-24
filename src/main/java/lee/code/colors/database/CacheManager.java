@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class CacheManager {
 
-    private Colors colors;
+    private final Colors colors;
     @Getter private final CachePlayers cachePlayers;
 
     public CacheManager(Colors colors, DatabaseManager databaseManager) {
