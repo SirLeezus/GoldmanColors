@@ -1,0 +1,6 @@
+name: GoldmanColors
+version: ${version}
+main: lee.code.colors.Colors
+api-version: 1.19
+author: Lee
+folia-supported: true
