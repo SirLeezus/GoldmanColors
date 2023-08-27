@@ -10,18 +10,17 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import java.util.UUID;
 
 public class JoinListener implements Listener {
+  private final Colors colors;
 
-    private final Colors colors;
+  public JoinListener(Colors colors) {
+    this.colors = colors;
+  }
 
-    public JoinListener(Colors colors) {
-        this.colors = colors;
-    }
-
-    @EventHandler (priority = EventPriority.LOWEST)
-    public void onPlayerJoin(PlayerJoinEvent e) {
-        final CacheManager cacheManager = colors.getCacheManager();
-        final UUID uuid = e.getPlayer().getUniqueId();
-        if (!cacheManager.getCachePlayers().hasPlayerData(uuid)) cacheManager.getCachePlayers().createPlayerData(uuid);
-        cacheManager.updatePlayerColor(e.getPlayer());
-    }
+  @EventHandler(priority = EventPriority.LOWEST)
+  public void onPlayerJoin(PlayerJoinEvent e) {
+    final CacheManager cacheManager = colors.getCacheManager();
+    final UUID uuid = e.getPlayer().getUniqueId();
+    if (!cacheManager.getCachePlayers().hasPlayerData(uuid)) cacheManager.getCachePlayers().createPlayerData(uuid);
+    cacheManager.updatePlayerColor(e.getPlayer());
+  }
 }
