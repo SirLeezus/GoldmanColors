@@ -5,11 +5,13 @@ import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.events.AbstractStructure;
 import com.comphenix.protocol.events.InternalStructure;
 import com.comphenix.protocol.events.PacketContainer;
+import com.comphenix.protocol.reflect.StructureModifier;
 import com.comphenix.protocol.wrappers.EnumWrappers;
 import com.comphenix.protocol.wrappers.WrappedChatComponent;
 import lee.code.colors.utils.CoreUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.DisplaySlot;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -70,7 +72,7 @@ public class AbstractBoard {
     final PacketContainer packet = new PacketContainer(PacketType.Play.Server.SCOREBOARD_DISPLAY_OBJECTIVE);
 
     //below name
-    packet.getIntegers().write(0, 2);
+    packet.getEnumModifier(DisplaySlot.class, 0).write(0, DisplaySlot.BELOW_NAME);
 
     // set objective name - The unique name for the scoreboard to be displayed.
     packet.getStrings().write(0, "health");
