@@ -59,10 +59,8 @@ public class BoardBuilder {
     boardData.setTeamName(priority + player.getName());
     boardData.setCollisionRule(collisionRule);
     if (nameColor != null) boardData.setColor(nameColor);
-    if (prefix != null)
-      boardData.setPrefix(WrappedChatComponent.fromJson(CoreUtil.serializeColorComponentJson(prefix + " ")));
-    if (suffix != null)
-      boardData.setSuffix(WrappedChatComponent.fromJson(CoreUtil.serializeColorComponentJson(" " + suffix)));
+    if (prefix != null) boardData.setPrefix(WrappedChatComponent.fromJson(CoreUtil.serializeColorComponentJson(prefix + " ")));
+    if (suffix != null) boardData.setSuffix(WrappedChatComponent.fromJson(CoreUtil.serializeColorComponentJson(" " + suffix)));
     boardData.setPlayers(Collections.singletonList(name));
     return boardData;
   }
