@@ -9,7 +9,7 @@ import lee.code.colors.scoreboard.ScoreboardManager;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Colors  extends JavaPlugin {
+public class Colors extends JavaPlugin {
   @Getter private static Colors instance;
   @Getter private ScoreboardManager scoreboardManager;
   @Getter private CacheManager cacheManager;
